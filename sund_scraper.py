@@ -1,5 +1,4 @@
 import requests
-import json
 import csv
 import logging
 import time
@@ -10,14 +9,12 @@ logging.basicConfig(filename = 'sund_scraper.log',
                     level = logging.INFO)
 logger = logging.getLogger(__name__)
 
-
 def main():
     try:
         scraper()
     except Exception as e:
         logger.info(e)
-    time.sleep(5)
-
+    time.sleep(30)
 
 def scraper():
     url = 'https://atlas.jifo.co/api/connectors/e85aa83c-5e92-4445-8898-6dc9f4598003'
